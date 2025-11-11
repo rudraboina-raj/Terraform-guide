@@ -74,6 +74,7 @@ You can write a Terraform file to create S3 and DynamoDB resources, and use it a
 Terraform keeps track of resources using a state file (terraform.tfstate), which represents the real-world infrastructure.
 
 Best Practices:
+---------------------------------------------------------------------------
 
 Isolate and organize state files to reduce the blast radius.
 
@@ -85,3 +86,37 @@ Use DynamoDB for state file locking to prevent concurrent updates.
 
 Example:
 If someone modifies the prod environment accidentally, separate state files ensure the dev environment remains unaffected.
+
+⚠️ Problems with Terraform
+------------------------------------------------------------------
+
+State file is a single source of truth.
+If it gets corrupted or lost, you may lose infrastructure tracking.
+
+Manual changes made directly in the cloud console are not detected or auto-corrected by Terraform.
+
+Not GitOps friendly – doesn’t integrate easily with GitOps tools like FluxCD or ArgoCD.
+
+Complexity – Large Terraform projects can become complex and difficult to manage.
+
+Overlap with Configuration Management Tools – Terraform is sometimes used for configuration management, but it’s primarily for infrastructure provisioning, not configuration.
+
+🧰 Ideal Terraform Setup
+-------------------------------------------------------------------------
+
+Here’s a common setup for using Terraform in an organization:
+
+Workflow:
+
+Developers/DevOps Engineers write Terraform scripts.
+
+They store the scripts in a GitHub repository.
+
+Jenkins (or any CI/CD tool) pulls the Terraform scripts and runs them.
+
+Terraform provisions resources on AWS.
+
+Terraform state files are stored in S3 (remote backend).
+
+DynamoDB is used for state file locking to avoid parallel runs.
+
