@@ -120,3 +120,31 @@ Terraform state files are stored in S3 (remote backend).
 
 DynamoDB is used for state file locking to avoid parallel runs.
 
+Diagram:
+-------------------------------------------------------------------
+
+Users --> Jenkins --> Terraform (GitHub) --> AWS
+                    |
+                    |-- stores state file in --> S3
+                    |
+                    |-- DynamoDB --> used for locking Terraform state.
+
+
+🧩 Terraform in Real Organizations (Example Use Case)
+---------------------------------------------------------------------------------
+
+DevOps engineers write and maintain Terraform scripts.
+
+Scripts are stored in GitHub repositories.
+
+Other users (e.g., developers, support engineers) don’t have direct AWS access.
+
+They trigger Jenkins pipelines to execute Terraform scripts indirectly.
+
+Jenkins pulls the Terraform files from GitHub and provisions the AWS resources.
+
+The users then get output or status of their created resources.
+
+
+
+
