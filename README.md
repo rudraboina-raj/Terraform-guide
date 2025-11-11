@@ -147,5 +147,22 @@ Users --> Jenkins --> Terraform (GitHub) --> AWS
 * The users then get output or status of their created resources.
 
 
+📦 Product Files in GitHub
+----------------------------------------------------------------------------
 
+The Terraform state file should not be stored directly in GitHub.
 
+Instead, it should go into a remote backend (like AWS S3) integrated with a locking solution (like DynamoDB).
+
+Example configuration:
+---------------------------------------------------------
+
+terraform {
+  backend "s3" {
+    bucket         = "terraform-state-bucket"
+    key            = "env/prod/terraform.tfstate"
+    region         = "us-east-1"
+    dynamodb_table = "terraform-locks"
+    encrypt        = true
+  }
+}
