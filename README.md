@@ -67,3 +67,21 @@ A module is a way of writing reusable, maintainable, and shareable code blocks (
 
 Example:
 You can write a Terraform file to create S3 and DynamoDB resources, and use it as a module inside other Terraform scripts.
+
+🗂️ Terraform State Files
+---------------------------------------------------------------------------------
+
+Terraform keeps track of resources using a state file (terraform.tfstate), which represents the real-world infrastructure.
+
+Best Practices:
+
+Isolate and organize state files to reduce the blast radius.
+
+Use different state files for environments like dev, prod, and staging.
+
+Store state files in remote backends such as Amazon S3 for safety.
+
+Use DynamoDB for state file locking to prevent concurrent updates.
+
+Example:
+If someone modifies the prod environment accidentally, separate state files ensure the dev environment remains unaffected.
