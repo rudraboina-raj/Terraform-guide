@@ -156,7 +156,7 @@ Instead, it should go into a remote backend (like AWS S3) integrated with a lock
 
 Example configuration:
 ---------------------------------------------------------
------------------------------------------------------------
+
 terraform {
   backend "s3" {
     bucket         = "terraform-state-bucket"
@@ -166,4 +166,3 @@ terraform {
     encrypt        = true
   }
 }
---------------------------------------------------------
