@@ -19,4 +19,28 @@ Azure → Resource Manager (ARM templates)
 
 OpenStack → Heat templates
 
-Terraform → Multi-cloud IaC using provider APIs
+Terraform → Multi-cloud IaC using provider APIs.
+
+🧩 API as Code
+-----------------------------------------------------------------------
+
+API as Code is a concept that allows automation of cloud resources across multiple providers (AWS, Azure, GCP, etc.) using their APIs.
+
+Terraform uses this principle to interact with cloud providers via APIs.
+
+API → Application Programming Interface
+
+Terraform acts as a universal API manager for multiple providers.
+
+🪄 Advantages of Terraform
+--------------------------------------------------------------------------
+
+Manage any infrastructure (multi-cloud support)
+
+Track your infrastructure state
+
+Automate infrastructure changes
+
+Collaborate effectively via version control
+
+Standardize configurations across environments
