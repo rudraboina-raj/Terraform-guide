@@ -43,4 +43,27 @@ Automate infrastructure changes
 
 Collaborate effectively via version control
 
-Standardize configurations across environments
+Standardize configurations across environments.
+
+🔁 Lifecycle of Terraform
+---------------------------------------------------------------
+
+Write Terraform configuration files
+Define resources using .tf files.
+
+Plan
+Use terraform plan to preview changes Terraform will make to your infrastructure.
+
+Apply
+Use terraform apply to provision your infrastructure and update the state file.
+
+🧠 Terraform Modules
+-------------------------------------------------------------------------
+
+Modules help you create reusable infrastructure components.
+
+Definition:
+A module is a way of writing reusable, maintainable, and shareable code blocks (Terraform scripts).
+
+Example:
+You can write a Terraform file to create S3 and DynamoDB resources, and use it as a module inside other Terraform scripts.
