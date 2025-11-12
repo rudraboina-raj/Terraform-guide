@@ -3,8 +3,8 @@
 What is Terraform?
 -----------------------------------------------------------
 
-Terraform is an open-source Infrastructure as Code (IaC) tool developed by HashiCorp.
-It allows you to define, provision, and manage infrastructure (servers, databases, networking, etc.) using code — making infrastructure repeatable, consistent, and version-controlled.
+* Terraform is an open-source Infrastructure as Code (IaC) tool developed by HashiCorp.
+* It allows you to define, provision, and manage infrastructure (servers, databases, networking, etc.) using code — making infrastructure repeatable, consistent, and version-controlled.
 
 ⚙️ Infrastructure as Code (IaC)
 -----------------------------------------------------------------------------------
@@ -24,9 +24,9 @@ Terraform → Multi-cloud IaC using provider APIs.
 🧩 API as Code
 -----------------------------------------------------------------------
 
-API as Code is a concept that allows automation of cloud resources across multiple providers (AWS, Azure, GCP, etc.) using their APIs.
+* API as Code is a concept that allows automation of cloud resources across multiple providers (AWS, Azure, GCP, etc.) using their APIs.
 
-Terraform uses this principle to interact with cloud providers via APIs.
+* Terraform uses this principle to interact with cloud providers via APIs.
 
 API → Application Programming Interface
 
@@ -50,12 +50,12 @@ Terraform acts as a universal API manager for multiple providers.
 
 Write Terraform configuration files
 
-Define resources using .tf files.
+* Define resources using .tf files.
 
-Plan ;
+* Plan ;
 Use terraform plan to preview changes Terraform will make to your infrastructure.
 
-Apply ;
+* Apply ;
 Use terraform apply to provision your infrastructure and update the state file.
 
 🧠 Terraform Modules
