@@ -108,4 +108,4 @@ Providers = **Hands**
 ---
 
 ## 🏷️ Tags
-`Terraform` `DevOps` `Infrastructure as Code` `Cloud` `AWS` `GCP` `Azure`
+`Terraform` `DevOps` `Infrastructure as Code` `Cloud` `AWS` `GCP` and `Azure`
